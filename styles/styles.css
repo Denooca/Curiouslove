@@ -1,0 +1,149 @@
+.adlam-display-regular {
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+.lexend-deca-regular {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 28%, rgba(88, 47, 148, 1) 100%);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: #FFFFFF;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.content {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 400;
+}
+
+.title {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #dddddd86;
+    margin-bottom: 20px;
+}
+
+#cards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(242px, 242px));
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+
+}
+
+.card {
+    color: #FFFFFF;
+    background-color: #0000006d;
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 400;
+    margin-top: 24px;
+    padding-top: 15px;
+    width: 242px;
+    height: 64px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid #FFFFFF;
+}
+
+.card:hover {
+    background-color: #0f021b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.card:active {
+    background-color: #000000;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+    transform: translateY(1px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+span#carregando {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 15px solid #4611cd;
+    border-top: 15px solid transparent;
+    animation: loading 1s linear infinite;
+    animation: loading 1s linear infinite, desaparecer 0.5s ease forwards;
+    animation-delay: 0s, 1s;
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000009a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: desaparecer 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
