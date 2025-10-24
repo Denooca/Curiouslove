@@ -38,6 +38,9 @@ nav {
 }
 
 .content {
+    max-width: 900px;
+    padding: 20px;
+    margin-top: 100px;
     color: #FFFFFF;
     text-align: center;
     font-family: "ADLaM Display", system-ui;
@@ -45,52 +48,25 @@ nav {
 }
 
 .title {
+    animation: ease 0.8s ease forwards;
     font-size: 64px;
     margin-bottom: 16px;
 }
 
 .subtitle {
+    animation: ease 1s ease forwards;
     font-size: 24px;
     color: #dddddd86;
     margin-bottom: 20px;
 }
 
 #cards {
-
+    animation: ease 2s ease forwards;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(242px, 242px));
     justify-content: center;
     gap: 10px;
     margin-bottom: 24px;
-
-}
-
-.card {
-    color: #FFFFFF;
-    background-color: #0000006d;
-    font-family: "ADLaM Display", system-ui;
-    font-weight: 400;
-    margin-top: 24px;
-    padding-top: 15px;
-    width: 242px;
-    height: 64px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border: 0.5px solid #FFFFFF;
-}
-
-.card:hover {
-    background-color: #0f021b;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.card:active {
-    background-color: #000000;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: scale(0.98);
-    transform: translateY(1px);
 }
 
 * {
@@ -146,4 +122,63 @@ span#carregando {
         opacity: 0;
         visibility: hidden;
     }
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.625);
+    padding: 20px 40px;
+    width: 242px;
+    height: 64px;
+    text-align: center;
+    margin-top: 24px;
+    font-family: "ADLaM Display", system-ui;
+    font-size: 24px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+button:hover {
+    animation: butanim 0.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes butanim {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@keyframes ease {
+    0% {
+        opacity: 0;
+        translate: 0px 40px;
+    }
+    100% {
+        opacity: 1;
+        translate: 0px 0px;
+    }
+}
+
+div.searchbar {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,4 @@
+{
+  "name": "CuriousLove",
+  "description": "Uma aplicação web para descobrir novas curiosidades sobre diversos temas, utilizando a API do Google Gemini para gerar o conteúdo."
+}
